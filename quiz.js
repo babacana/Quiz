@@ -1370,7 +1370,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         isFadingToIdle = false;
 
-        const currentIdleTimeoutSeconds = parseInt(settings.idleTimeoutSeconds, 10) || DEFAULT_SETTINGS.idleTimeoutSeconds;
+        let currentIdleTimeoutSeconds = parseInt(settings.idleTimeoutSeconds, 10) || DEFAULT_SETTINGS.idleTimeoutSeconds;
         let currentFadeOutLeadSeconds = parseInt(settings.fadeOutLeadTimeSeconds, 10) || DEFAULT_SETTINGS.fadeOutLeadTimeSeconds;
 
         if (currentFadeOutLeadSeconds >= currentIdleTimeoutSeconds) {
